@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Tabela de Notas
 
-First, run the development server:
+Projeto simples em Next.js que exibe uma tabela de notas/estudantes — componente de exemplo para estudo e demonstração.
+
+**Autor:** Thales
+
+**Status:** Projeto de estudo / protótipo
+
+**Stack:** Next.js (app router), React, TypeScript, TailwindCSS (PostCSS)
+
+## Conteúdo
+- **Visão geral:** demonstração de componente `StudentTable` que consome dados locais.
+- **Código-fonte principal:** `src/app`, `src/components/StudentTable.tsx`, `src/data/students.ts`, `src/Types/Student.ts`.
+
+## Requisitos
+- Node.js 18+ (recomendado)
+- npm ou pnpm/yarn
+
+## Como rodar (desenvolvimento)
+
+1. Clone o repositório ou copie a pasta para sua máquina.
+2. Instale as dependências:
+
+```bash
+npm install
+```
+
+3. Rode em modo desenvolvimento:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Abra http://localhost:3000 no navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts úteis
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` — inicia o servidor de desenvolvimento (next dev).
+- `npm run build` — cria a versão de produção (next build).
+- `npm run start` — inicia a aplicação em modo produção (next start).
 
-## Learn More
+## Estrutura do projeto (resumo)
 
-To learn more about Next.js, take a look at the following resources:
+- `public/` — ativos estáticos.
+- `src/app/` — rota principal com `page.tsx`, `layout.tsx` e `globals.css`.
+- `src/components/` — componente `StudentTable.tsx`.
+- `src/data/` — dados de exemplo (`students.ts`).
+- `src/Types/` — tipos TypeScript (`Student.ts`).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Notas de desenvolvimento
+- Projeto usa Next.js 16 + React 19 + TypeScript.
+- Tailwind está presente nas dependências; se quiser habilitar utilitários Tailwind, verifique a configuração (`tailwind.config.js`) e importe os diretórios corretos em `globals.css`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Como contribuir
+- Abra uma issue descrevendo o que deseja alterar.
+- Para pequenas correções, envie um pull request com um branch explicativo.
 
-## Deploy on Vercel
+## Sugestões para evolução
+- Validar/formatar dados (formulário para adicionar/editar estudantes).
+- Paginação e ordenação na tabela.
+- Persistência (localStorage, API ou banco de dados simples).
+- Testes unitários para o componente `StudentTable`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Licença
+Este repositório não contém uma licença explícita.
